@@ -7,6 +7,8 @@ import Nav from './Nav';
 import ManufacturersList from './inventory/ManufacturersList';
 import ManufacturerForm from './inventory/ManufacturerForm';
 
+import VehicleModelsList from './inventory/VehicleModelsList';
+
 
 function App() {
   return (
@@ -18,6 +20,9 @@ function App() {
           <Route path="manufacturers">
             <Route index element={<ManufacturersList />} />
             <Route path="new/" element={<ManufacturerForm />}/>
+          </Route>
+          <Route path="models">
+            <Route index element={<VehicleModelsList />}/>
           </Route>
         </Routes>
       </div>
