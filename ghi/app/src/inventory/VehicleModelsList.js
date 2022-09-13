@@ -9,7 +9,7 @@ function VehicleModelsList({ models }) {
       const response = await fetch('http://localhost:8100/api/models/')
       const vehicleData = await response.json();
       setCurrentVehicleModels(vehicleData.models)
-      console.log("=HERES YOUR DATAAAAAA=", vehicleData)
+      console.log("=HERES YOUR DATAAAAAA=", vehicleData.models)
     }
     getVehicleModelsData()
   }, []);
