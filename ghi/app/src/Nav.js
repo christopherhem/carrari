@@ -2,10 +2,10 @@ import { NavLink } from "react-router-dom";
 
 function Nav() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-success">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
         <NavLink className="navbar-brand" to="/">
-          CarCar
+        Carrari
         </NavLink>
         <button
           className="navbar-toggler"
@@ -77,29 +77,39 @@ function Nav() {
               </a>
               <ul className="dropdown-menu">
                 <li className="nav-item">
-                  <NavLink className="dropdown-item" to="/sales/">
-                    List of Sales
+                  <NavLink className="dropdown-item" to="/sales">
+                    List of All Sales
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="dropdown-item" to="/sales/new">
-                    Create a Sale Record
+                  <NavLink className="dropdown-item" to="/customer">
+                    List of Customers
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="dropdown-item" to="/salesperson">
+                    List of Salepersons
                   </NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink className="dropdown-item" to="/sales/history">
-                    Staff's Sales History
+                    List of Salesperson's history
                   </NavLink>
                 </li>
                 <div className="dropdown-divider"></div>
                 <li className="nav-item">
-                  <NavLink className="dropdown-item" to="/customers/new/">
-                    Register a Customer
+                  <NavLink className="dropdown-item" to="/customer/new/">
+                    Create a New Customer
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="dropdown-item" to="/salestaffs/new/">
-                    Register a Sales Staff
+                  <NavLink className="dropdown-item" to="/sales/new">
+                    Create a New Sale
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="dropdown-item" to="/salesperson/new/">
+                    Create a New Salesperson
                   </NavLink>
                 </li>
               </ul>
@@ -111,7 +121,7 @@ function Nav() {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Inventories
+                Inventory
               </a>
               <ul className="dropdown-menu">
                 <li className="nav-item">
@@ -121,7 +131,7 @@ function Nav() {
                 </li>
                 <li className="nav-item">
                   <NavLink className="dropdown-item" to="/manufacturers/new">
-                    Register a Manufacturer
+                    Add a Manufacturer
                   </NavLink>
                 </li>
                 <div className="dropdown-divider"></div>
@@ -132,7 +142,7 @@ function Nav() {
                 </li>
                 <li className="nav-item">
                   <NavLink className="dropdown-item" to="/models/new">
-                    Register a Vehicle Model
+                    Add a Vehicle Model
                   </NavLink>
                 </li>
                 <div className="dropdown-divider"></div>
@@ -143,7 +153,7 @@ function Nav() {
                 </li>
                 <li className="nav-item">
                   <NavLink className="dropdown-item" to="/automobiles/new">
-                    Register a Automobile
+                    Add an Automobile
                   </NavLink>
                 </li>
               </ul>

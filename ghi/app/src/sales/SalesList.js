@@ -19,7 +19,7 @@ function SalesList() {
   return (
     <>
     <hr></hr>
-    <h2>Lists of all sales</h2>
+    <h1>Lists of All Sales</h1>
     <table className="table table-striped">
       <thead>
         <tr>

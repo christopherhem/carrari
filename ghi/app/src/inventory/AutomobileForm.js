@@ -1,6 +1,8 @@
 import React, { useEffect,useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 
 function AutomobileForm() {
+    const navigate = useNavigate()
     const [state, setState] = useState({
         vin:'',
         color:'',
@@ -41,6 +43,7 @@ function AutomobileForm() {
                 year:'',
                 model_id:'',
             });
+            navigate('/automobiles')
         }
     }
     const handleChange = event => {

@@ -18,7 +18,7 @@ function CustomerList() {
   return (
     <>
     <hr></hr>
-    <h2>Lists of customers</h2>
+    <h1>Lists of Customers</h1>
     <table className="table table-striped">
       <thead>
         <tr>

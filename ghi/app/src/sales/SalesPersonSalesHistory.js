@@ -43,7 +43,8 @@ function SalesPersonSalesHistory() {
 
   return (
     <>
-      <h1>Sales person history</h1>
+      <hr></hr>
+      <h1>Salesperson's History</h1>
       <div className="mb-3">
       <select onChange={handleChange} value={selectedEmployeeID} className="form-select" name="sales_person_history" id="sales_person_history">
         <option value="">Select a Salesperson</option>

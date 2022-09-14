@@ -90,7 +90,7 @@ return (
         <div className="row">
         <div className="offset-3 col-6">
         <div className="shadow p-4 mt-4">
-            <h1>Record a new sale</h1>
+            <h1>Create a New Sale</h1>
             <form onSubmit={handleSubmit} id="create-sale-form">
             <div className="mb-3">
                     <select onChange={handleAutomobileChange} value={selectedAutomobile} required name="automobile" id="automobile" className="form-select">

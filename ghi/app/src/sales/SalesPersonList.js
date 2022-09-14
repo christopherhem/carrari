@@ -19,7 +19,7 @@ function SalesPersonList() {
   return (
     <>
     <hr></hr>
-    <h2>Lists of Salesperson</h2>
+    <h1>Lists of Salesperson</h1>
     <table className="table table-striped">
       <thead>
         <tr>
