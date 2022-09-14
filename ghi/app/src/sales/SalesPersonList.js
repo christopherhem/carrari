@@ -1,12 +1,12 @@
 import { useEffect , useState} from "react";
 
 
-function SalesPersonList({ sales_persons }) {
+function SalesPersonList() {
   const [currentSalesPerson, setCurrentSalesPerson] = useState([]);
 
   useEffect(() => {
     const getSalesPersonData = async () => {
-        console.log("HELLO")
+      console.log("HELLO")
       const response = await fetch('http://localhost:8090/api/salesperson/')
       const salesPersonData = await response.json();
       setCurrentSalesPerson(salesPersonData.sales_persons)
@@ -24,7 +24,7 @@ function SalesPersonList({ sales_persons }) {
       <thead>
         <tr>
           <th>Name</th>
-          <th>Employee ID</th>
+          <th>Employee Number</th>
         </tr>
       </thead>
       <tbody>
@@ -33,7 +33,6 @@ function SalesPersonList({ sales_persons }) {
             <tr key={salesperson.id}>
               <td>{ salesperson.name }</td>
               <td>{ salesperson.employee_number }</td>
-              {/* <td><img src={ model.picture_url }/></td> */}
             </tr>
           );
         })}

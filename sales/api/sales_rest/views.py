@@ -88,7 +88,7 @@ def api_show_customer(request, pk):
             safe=False,
         )
     elif request.method == "DELETE":
-        count, _ = CustomerListEncoder.objects,filter(id=pk).delete()
+        count, _ = Customer.objects.filter(id=pk).delete()
         return JsonResponse({"deleted": count > 0 })
     else:
         content = json.loads(request.body)
@@ -150,7 +150,7 @@ def api_show_sales(request, pk):
             safe=False,
         )
     elif request.method == "DELETE":
-        count, _ = SalesRecordListEncoder.objects,filter(id=pk).delete()
+        count, _ = SalesRecord.objects.filter(id=pk).delete()
         return JsonResponse({"deleted": count > 0 })
     else:
         content = json.loads(request.body)
@@ -158,7 +158,7 @@ def api_show_sales(request, pk):
         sales = SalesRecord.objects.get(id=pk)
         return JsonResponse(
             sales,
-            encoder=SalesRecordListEncoder,
+            encoder=SalesRecordDetailEncoder,
             safe=False,
         )
 

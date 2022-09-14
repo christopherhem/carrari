@@ -16,6 +16,13 @@ import AutomobileForm from './inventory/AutomobileForm';
 import SalesPersonForm from './sales/SalesPersonForm';
 import SalesPersonList from './sales/SalesPersonList';
 
+import CustomerForm from './sales/CustomerForm';
+import CustomerList from './sales/CustomerList';
+
+import SalesForm from './sales/SalesForm';
+import SalesList from './sales/SalesList';
+import SalesPersonSalesHistory from './sales/SalesPersonSalesHistory';
+
 function App() {
   return (
     <BrowserRouter>
@@ -38,6 +45,15 @@ function App() {
           <Route path="salesperson">
             <Route index element={<SalesPersonList />}/>
             <Route path="new/" element={<SalesPersonForm />}/>
+          </Route>
+          <Route path="customer">
+            <Route index element={<CustomerList />}/>
+            <Route path="new/" element={<CustomerForm />}/>
+          </Route>
+          <Route path="sales">
+            <Route index element={<SalesList />}/>
+            <Route path="new/" element={<SalesForm />}/>
+            <Route path="history/" element={<SalesPersonSalesHistory />}/>
           </Route>
         </Routes>
       </div>
