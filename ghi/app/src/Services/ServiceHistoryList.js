@@ -16,22 +16,11 @@ function ServiceAppointmentList() {
         fetchAppointments()
     }, []);
     
-    const cancelAppointment = async (id) => {
-        const cancelUrl = `http://localhost:8080/api/appointments/${id}/`
-        const fetchConfig = {
-            method: "delete"
-        }
-        const cancelResponse = await fetch(cancelUrl, fetchConfig)
-        if (cancelResponse.ok){
-            let updatedAppointments = [];
-            updatedAppointments = appointments.filter(appointment => appointment.id !== id)
-            setAppointments(updatedAppointments);
-        }
-    }
 
     return (
         <>
             <h1>Service Appointments</h1>
+            <input onChange="Search VIN" type="search" className="form-control rounded" placeholder="Search"/>
             <table className="table table-striped">
                 <thead>
                     <tr>
@@ -53,8 +42,6 @@ function ServiceAppointmentList() {
                                 <td> {new Date(appointment.date).toLocaleTimeString('en-US')} </td>
                                 <td> {appointment.reason} </td>
                                 <td> {appointment.technician.technician_name} </td>
-                                <td><button className="btn btn-danger" onClick={() => cancelAppointment(appointment.id)}>Cancel</button></td>
-                                <td><button className="btn btn-success" onClick={() => cancelAppointment(appointment.id)}>Finished</button></td>
                             </tr>
                         );
                     })}
@@ -65,3 +52,9 @@ function ServiceAppointmentList() {
     }
 
 export default ServiceAppointmentList;
+
+
+
+
+
+
