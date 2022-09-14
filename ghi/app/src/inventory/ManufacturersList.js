@@ -17,6 +17,8 @@ function ManufacturersList({ manufacturers }) {
 
   return (
     <>
+    <hr></hr>
+    <h1>List of Manufacturers</h1>
     <table className="table table-striped">
       <thead>
         <tr>

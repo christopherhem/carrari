@@ -9,16 +9,18 @@ function VehicleModelsList({ models }) {
       const response = await fetch('http://localhost:8100/api/models/')
       const vehicleData = await response.json();
       setCurrentVehicleModels(vehicleData.models)
-      console.log("=HERES YOUR DATAAAAAA=", vehicleData)
+      console.log("=HERES YOUR DATAAAAAA=", vehicleData.models)
     }
     getVehicleModelsData()
   }, []);
 
 
+
+
   return (
     <>
     <hr></hr>
-    <h2>Vehicle models</h2>
+    <h1>Vehicle Models</h1>
     <table className="table table-striped">
       <thead>
         <tr>
@@ -33,7 +35,7 @@ function VehicleModelsList({ models }) {
             <tr key={model.id}>
               <td>{ model.name }</td>
               <td>{ model.manufacturer.name }</td>
-              <td><img src={ model.picture_url }/></td>
+              <td><img style={{ width:350, height:250 }} src={ model.picture_url } /></td>
             </tr>
           );
         })}

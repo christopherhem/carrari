@@ -15,6 +15,7 @@ function AutomobileList() {
 
 return (
     <>
+    <hr></hr>
         <h1>Automobiles</h1>
         <table className="table table-striped">
         <thead>

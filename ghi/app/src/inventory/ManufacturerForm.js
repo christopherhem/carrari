@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import { History } from 'history';
+import { useNavigate } from 'react-router-dom'
 
 function ManufacturerForm() {
+    const navigate = useNavigate()
     const [name, setName] = useState('');
 
     const handleSubmit = async (event) => {
@@ -20,7 +21,7 @@ function ManufacturerForm() {
         const response = await fetch(url, fetchConfig);
         if (response.ok) {
             setName('');
-            window.history.back();
+            navigate('/manufacturers')
         }
     }
 

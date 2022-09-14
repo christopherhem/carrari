@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { History } from 'history';
+import { useNavigate } from 'react-router-dom'
 
 function VehicleForm() {
+    const navigate = useNavigate()
     const [state, setState] = useState({
         name:'',
         manufacturer_id:'',
         picture_url:'',
-
     });
     const [manufacturers, setManufacturers] = useState([])
 
@@ -26,7 +26,7 @@ function VehicleForm() {
 
         const vehicleUrl = 'http://localhost:8100/api/models/'
         const fetchConfig = {
-            method: "post",
+            method: "POST",
             body: JSON.stringify(data),
             headers: {
                 'Content-Type': 'application/json'
@@ -39,7 +39,7 @@ function VehicleForm() {
                 manufacturer_id:'',
                 picture_url:'',
             });
-            window.history.back();
+            navigate('/models')
         }
     }
     const handleChange = event => {
