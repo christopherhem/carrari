@@ -1,7 +1,7 @@
 # Carrari
 
 <p align="center">
-	<img alt="Carrari logo" src="https://gitlab.com/chris.hem10/project-beta/-/blob/1caaea4d5c158deefed5b66e2b2a6fb5a911647b/ghi/app/public/images/carrari.png">
+	<img alt="Carrari logo" src="https://gitlab.com/chris.hem10/project-beta/-/raw/1caaea4d5c158deefed5b66e2b2a6fb5a911647b/ghi/app/public/images/carrari.png">
 </p>
 
 
