@@ -20,9 +20,7 @@ Team:
 ## Design
 
 ## Service microservice
-
-Explain your models and integration with the inventory
-microservice, here.
+The Service microservice contains multiple models: ServiceAppointment, AutomobileVO and Technician. These will communicate with the inventory database that was created and via polling, it will message to and from when the user creates a new technician, fills out the service appointment form and goes in and looks for the appontment history. The forms then allow the user to input the information and return a list of all the required fields at the end. Users also are able to view the history of the services by typing in the VIN number that is associated with the service appointment in order to look at each one separately. 
 
 ## Sales microservice
 
