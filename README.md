@@ -10,6 +10,12 @@
 ![Sales History Page](https://gitlab.com/chris.hem10/project-beta/-/raw/main/ghi/app/public/images/saleshistory.png)
 ![Add Vehicle Page](https://gitlab.com/chris.hem10/project-beta/-/raw/main/ghi/app/public/images/addvehicle.png)
 ![Appointment Page](https://gitlab.com/chris.hem10/project-beta/-/raw/main/ghi/app/public/images/appointment.png)
+![Add Tech Page](https://gitlab.com/chris.hem10/project-beta/-/raw/chris/ghi/app/public/images/addtech.png)
+![Service History Page](https://gitlab.com/chris.hem10/project-beta/-/raw/chris/ghi/app/public/images/servicehistory.png)
+![Service Appointments Page](https://gitlab.com/chris.hem10/project-beta/-/raw/chris/ghi/app/public/images/serviceappointments.png)
+
+
+
 
 
 Team:
