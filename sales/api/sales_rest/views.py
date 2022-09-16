@@ -178,6 +178,14 @@ def api_show_salesperson_history(request, pk):
                 status=400
             )
 
-
+@require_http_methods("GET")
+def api_for_sale(request):
+    sold = [sale.automobile.vin for sale in SalesRecord.objects.all()]
+    for_sale = AutomobileVO.objects.exclude(vin__in=sold)
+    return JsonResponse(
+        {'automobiles': for_sale},
+        encoder=AutomobileVOEncoder,
+        safe=False
+    )
 
 

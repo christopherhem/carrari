@@ -16,10 +16,10 @@ function SalesForm() {
 
     useEffect(() => {
         const getAutomobiles = async () => {
-            const url = 'http://localhost:8100/api/automobiles/'
+            const url = 'http://localhost:8090/api/automobiles/forsale/'
             const response = await fetch(url)
             const autoJson = await response.json();
-            setAutomobiles(autoJson.autos)
+            setAutomobiles(autoJson.automobiles)
         }
     
         const getSalesPersons = async () => {
