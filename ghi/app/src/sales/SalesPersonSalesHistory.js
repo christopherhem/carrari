@@ -67,7 +67,7 @@ function SalesPersonSalesHistory() {
         <tbody>
           {historySales.map(sale => {
             return (
-              <tr key={sale.automobile}>
+              <tr key={sale.id}>
                 <td>{sale.sales_person.name}</td>
                 <td>{sale.customer.name}</td>
                 <td>{sale.automobile.vin}</td>
